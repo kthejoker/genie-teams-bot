@@ -7,3 +7,6 @@ genie-teams-app/bin/
 simple-host-bot/__pycache__/
 simple-host-bot/bin/
 simple-host-bot/hostbot/
+
+.DS_Store
+genie-teams-app/.DS_Store

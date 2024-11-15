@@ -39,7 +39,7 @@
     ],
     "bots": [
         {
-            "botId": "6b53e049-a6da-4911-914b-a5589fbba6a3",
+            "botId": "673d22cc-db20-47cd-ba1a-35098791c029",
             "scopes": [
                 "personal"
             ],
@@ -51,7 +51,7 @@
     ],
     "validDomains": [],
     "webApplicationInfo": {
-        "id": "6b53e049-a6da-4911-914b-a5589fbba6a3",
+        "id": "673d22cc-db20-47cd-ba1a-35098791c029",
         "resource": ""
     }
 }
