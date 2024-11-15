@@ -1,0 +1,57 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+    "version": "1.0.0",
+    "manifestVersion": "1.17",
+    "id": "43605531-21df-4c17-834f-bc875c2ae1e5",
+    "name": {
+        "short": "Genie Bot Example",
+        "full": ""
+    },
+    "developer": {
+        "name": "Databricks, Inc",
+        "mpnId": "",
+        "websiteUrl": "https://www.databricks.com",
+        "privacyUrl": "https://www.databricks.com",
+        "termsOfUseUrl": "https://www.databricks.com"
+    },
+    "description": {
+        "short": "Talk to Databricks Genie!",
+        "full": "This bot allows you to talk to a Databricks Genie space."
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#FFFFFF",
+    "staticTabs": [
+        {
+            "entityId": "conversations",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "about",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "bots": [
+        {
+            "botId": "6b53e049-a6da-4911-914b-a5589fbba6a3",
+            "scopes": [
+                "personal"
+            ],
+            "isNotificationOnly": false,
+            "supportsCalling": false,
+            "supportsVideo": false,
+            "supportsFiles": false
+        }
+    ],
+    "validDomains": [],
+    "webApplicationInfo": {
+        "id": "6b53e049-a6da-4911-914b-a5589fbba6a3",
+        "resource": ""
+    }
+}
