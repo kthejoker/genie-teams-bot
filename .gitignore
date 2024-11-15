@@ -1,0 +1,9 @@
+genie-skill-bot/__pycache__/
+genie-skill-bot/bin/
+genie-skill-bot/geniebot/
+
+genie-teams-app/bin/
+
+simple-host-bot/__pycache__/
+simple-host-bot/bin/
+simple-host-bot/hostbot/
