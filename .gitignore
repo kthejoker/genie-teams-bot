@@ -10,3 +10,8 @@ simple-host-bot/hostbot/
 
 .DS_Store
 genie-teams-app/.DS_Store
+genie-skill-bot/bots/__pycache__/__init__.cpython-313.pyc
+genie-skill-bot/bots/__pycache__/genie_bot.cpython-313.pyc
+simple-host-bot/.DS_Store
+simple-host-bot/dialogs/__pycache__/main_dialog.cpython-313.pyc
+simple-host-bot/helpers/__pycache__/dialog_helper.cpython-313.pyc

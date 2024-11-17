@@ -31,7 +31,10 @@ from adapter_with_error_handler import AdapterWithErrorHandler
 from dialogs import MainDialog
 
 
-env = sys.argv[1]
+if len(sys.argv) == 2:
+    env = sys.argv[1]
+else:
+    env = "prod"
 bot_prefix=None
 if len(sys.argv) == 3:
     bot_prefix = sys.argv[2]

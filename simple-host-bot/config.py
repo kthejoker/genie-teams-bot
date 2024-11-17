@@ -10,9 +10,9 @@ from botbuilder.core.skills import BotFrameworkSkill
 class DefaultConfig:
     """ Bot Configuration """
 
-    def __init__(self, env, bot_prefix) -> None:
-        self.env = env
-        self.SKILL_HOST_ENDPOINT = self.envs[self.env]["endpoint"]
+    def __init__(self, env2, bot_prefix) -> None:
+        self.env2 = env2
+        self.SKILL_HOST_ENDPOINT = self.envs2[self.env2]["endpoint"]
         self.SKILLS = [
         {
             "id": "SkillBot",
@@ -24,9 +24,9 @@ class DefaultConfig:
             self.BOT_PREFIX = bot_prefix
     
     def get_env_key(self, key):
-        return self.envs[self.env][key]
+        return self.envs2[self.env2][key]
 
-    env = "prod"
+    env2 = "prod"
     BOT_PREFIX=os.environ.get("BOT_PREFIX", "genie")
     
     PORT = 3978
@@ -36,7 +36,7 @@ class DefaultConfig:
     APP_TENANTID = os.environ.get("MicrosoftAppTenantId", "")
     CONNECTION_NAME = "Teams Oauth" # os.environ.get("ConnectionName", "Teams Oauth")
     
-    envs = { 
+    envs2 = { 
                 "local-to-prod" : {
             "endpoint" : f"http://localhost:{PORT}/api/skills",
              "skill_bot_url" : f"{BOT_PREFIX}-genie-skill-001.azurewebsites.net"
