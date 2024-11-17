@@ -5,8 +5,8 @@ if [[ -z "${LOCATION}" ]]; then
   read LOCATION
 fi
 if [ $(az group exists --name $RESOURCEGROUPNAME) = false ]; then
-    #az group create --name $RESOURCEGROUPNAME --location $LOCATION --tags
-    az group create --name $RESOURCEGROUPNAME --location $LOCATION
+    az group create --name $RESOURCEGROUPNAME --location $LOCATION --tags Owner=kyle.hale@databricks.com
+    #az group create --name $RESOURCEGROUPNAME --location $LOCATION
 fi
 
 export MicrosoftAppId="$(az ad app create --display-name "Genie Root Bot" --sign-in-audience "AzureADMultipleOrgs" --query "appId" -o tsv)"

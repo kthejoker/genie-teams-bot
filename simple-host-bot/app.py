@@ -28,6 +28,7 @@ from authentication import AllowedSkillsClaimsValidator
 from bots import RootBot
 from config import DefaultConfig, SkillConfiguration
 from adapter_with_error_handler import AdapterWithErrorHandler
+from dialogs import MainDialog
 
 
 env = sys.argv[1]
@@ -60,8 +61,10 @@ ADAPTER = AdapterWithErrorHandler(
     SETTINGS, CONFIG, CONVERSATION_STATE, CLIENT, SKILL_CONFIG
 )
 
+DIALOG = MainDialog(CONFIG.CONNECTION_NAME)
+
 # Create the Bot
-BOT = RootBot(CONVERSATION_STATE, SKILL_CONFIG, CLIENT, CONFIG)
+BOT = RootBot(CONVERSATION_STATE, SKILL_CONFIG, CLIENT, CONFIG, DIALOG)
 
 SKILL_HANDLER = SkillHandler(
     ADAPTER, BOT, ID_FACTORY, CREDENTIAL_PROVIDER, AUTH_CONFIG

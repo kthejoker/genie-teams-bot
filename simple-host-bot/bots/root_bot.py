@@ -2,6 +2,8 @@
 # Licensed under the MIT License.
 
 from typing import List
+from botbuilder.dialogs import Dialog
+from helpers.dialog_helper import DialogHelper
 
 from botbuilder.core import (
     ActivityHandler,
@@ -26,11 +28,13 @@ class RootBot(ActivityHandler):
         skills_config: SkillConfiguration,
         skill_client: SkillHttpClient,
         config: DefaultConfig,
+        dialog: Dialog
     ):
         self._bot_id = config.APP_ID
         self._skill_client = skill_client
         self._skills_config = skills_config
         self._conversation_state = conversation_state
+        self._dialog = dialog
         self._active_skill_property = conversation_state.create_property(
             ACTIVE_SKILL_PROPERTY_NAME
         )
@@ -63,6 +67,12 @@ class RootBot(ActivityHandler):
 
             # Send the activity to the skill
             await self.__send_to_skill(turn_context, skill)
+        elif "logon" in turn_context.activity.text:
+            await DialogHelper.run_dialog(
+                        self._dialog,
+                        turn_context,
+                        self._conversation_state.create_property("DialogState"),
+                    )
         else:
             # just respond
             await turn_context.send_activity(

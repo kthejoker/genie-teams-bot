@@ -34,6 +34,7 @@ class DefaultConfig:
     APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
     APP_TYPE = "MultiTenant"
     APP_TENANTID = os.environ.get("MicrosoftAppTenantId", "")
+    CONNECTION_NAME = "Teams Oauth" # os.environ.get("ConnectionName", "Teams Oauth")
     
     envs = { 
                 "local-to-prod" : {
