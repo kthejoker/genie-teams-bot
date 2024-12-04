@@ -34,14 +34,14 @@ Additionally, all instructions assume you are developing, testing, and deploying
 
 * export RESOURCEGROUPNAME=<your resource group name>
 * export LOCATION=<your resource group location> (eg "westus")
-* export BOT_PREFIX=<your prefix>
+* export BOT_PREFIX=<your custom prefix>
 * export APP_PLAN_LOCATION=<your App Service Plan location> (eg "westus")
 * export DATABRICKS_HOST=<your Azure Databricks workspace URI> (eg https://adb-984752964297111.11.azuredatabricks.net/)
 * export DATABRICKS_SPACE_ID=<your Genie Space ID> (from your Genie Space's URL eg 01ef3055390e110b9bb70cca1c8c7a31)
-* export DATABRICKS_TOKEN=<a Personal Access Token that has Can Use permissions on Genie> (SSO instructions coming soon)
+* export DATABRICKS_TOKEN=<a Personal Access Token that has Can Use permissions on the Genie space> (SSO instructions coming soon)
 
 ## Part 2. Test Everything Locally
-3. Open new terminal, rename HostBot, Run ```source rootbot.sh local```
+3. Open new terminal, rename HostBot, Run ```source hostbot.sh local```
 4. Open new terminal, rename SkilBot, Run ```source skillbot.sh```
 4. Open Bot Emulator Framework, connect to local host bot (http://localhost:3978/ap/messages), test with following commands:
 * "hello" (Expected response: "Your wish is my command! Say “genie” and your question I’ll patch you through")

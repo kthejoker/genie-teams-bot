@@ -135,6 +135,10 @@
               "value": "true"
             },
             {
+              "name": "ConnectionName",
+              "value": "Teams Oauth"
+            },
+            {
               "name": "BOT_PREFIX",
               "value": "[parameters('bot_prefix')]"
             },

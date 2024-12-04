@@ -49,9 +49,9 @@
             "supportsFiles": false
         }
     ],
-    "validDomains": [],
+    "validDomains": ["token.botframework.com"],
     "webApplicationInfo": {
         "id": "673d22cc-db20-47cd-ba1a-35098791c029",
-        "resource": "api://botid-673d22cc-db20-47cd-ba1a-35098791c029/access_as_user"
+        "resource": "api://botid-673d22cc-db20-47cd-ba1a-35098791c029"
     }
 }

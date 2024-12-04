@@ -11,6 +11,7 @@ from botbuilder.core import (
 from botbuilder.integration.aiohttp import CloudAdapter, ConfigurationBotFrameworkAuthentication
 from botbuilder.integration.aiohttp.skills import SkillHttpClient
 from botbuilder.schema import ActivityTypes, Activity, InputHints
+#from botbuilder.core.teams import TeamsSSOTokenExchangeMiddleware
 
 from config import DefaultConfig, SkillConfiguration
 from bots.root_bot import ACTIVE_SKILL_PROPERTY_NAME
@@ -27,6 +28,7 @@ class AdapterWithErrorHandler(CloudAdapter):
     ):
         super().__init__(settings)
         self._config = config
+        #self.use(TeamsSSOTokenExchangeMiddleware(MemoryStorage(), "TeamsSSO"))
 
         if not conversation_state:
             raise TypeError(
